@@ -1,0 +1,65 @@
+/* projectlist.css */
+.project-list {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px; /* Limit the width of the entire slider */
+}
+
+/* Optional: Style the Slick Slider dots */
+.slick-dots {
+  bottom: -30px; /* Move dots below the cards */
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-dots li button {
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #ff6f61;
+}
+
+/* Custom styles for project cards */
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #333;
+  /* margin-bottom: 10px; */
+  font-weight:bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.project-link {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}

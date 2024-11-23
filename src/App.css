@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Variables for Theming */
+/* Default Colors */
+:root {
+  --background: #030317;
+  --text: #ffffff;
+  --navbar-bg: #000000;
+  --card-bg: #0d122e;
+  --highlight: #00ddff;
+
+}
+
+/* Light Mode */
+body:not(.dark) {
+  --background: #ffffff;
+  --text: #242222;
+  --navbar-bg: #ffffff;
+  --card-bg: #e6e6e6;
+  --highlight: #007acc;
+}
+
+
+
+
+/* About Me Section */
+.about-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  margin-top: 15rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.about-header {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  color: var(--highlight);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.about-highlight {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--highlight);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Landing Page Styles */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust to take up most of the page */
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Title Animation */
+.landing-title {
+  font-size: 3.5rem;
+  font-family:"Courier New", Courier, monospace;
+  color: #0080ff; /* Dark professional color */
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  transform: translateY(50px);        
+  opacity: 0;
+  animation: slideIn 2s ease-out forwards;
+}
+
+/* Subtitle Animation */
+.landing-subtitle {
+  font-size: 1.8rem;
+  color: #7d8d8f; /* Muted gray for subtitle */
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
+}
+
+/* Description Animation */
+.landing-description {
+  font-size: 1.2rem;
+  color: #7f8c8d; /* Muted gray for description */
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 2s 1.5s forwards;
+}
+
+/* Professional Gradient for Background (Subtle) */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Subtle Background Color (Light gray to white) */
+@keyframes backgroundColor {
+  0% {
+    background-color: #f4f4f4; /* Soft off-white */
+  }
+  50% {
+    background-color: #e1e1e1; /* Light gray */
+  }
+  100% {
+    background-color: #f4f4f4; /* Soft off-white */
+  }
+}
+
+/* Slide-in Effect for Title */
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-in Effect for Subtitle and Description */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Prjectssssssssss */
+h1{
+  margin-top: 20rem;
+  font-size: 3.5rem;
+  text-align: center;
+  color:var(--highlight);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+/* projectcard.css */
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  padding:20px;
+  font-size: 1.5rem;
+  color: var(--highlight);
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.project-description {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.project-link {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Container for the project list */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default 3 columns for large screens */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+}
+
+/* Media Queries */
+
+/* Tablet (for screens smaller than 1024px) */
+@media (max-width: 1024px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablet */
+  }
+  h1{
+    margin-top: 5rem;
+  }
+}
+
+/* Mobile (for screens smaller than 768px) */
+@media (max-width: 767px) {
+  .project-list {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }  
+}
+
+  /* Video  */
+  .app {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .video-layer {
+    position: fixed;
+    object-fit: cover;
+    z-index: -2; /* Behind all content */
+    opacity: 1; /* Adjust opacity for better blending */
+  }
+  
+  .video-layer1 {
+    z-index: -3; /* Bottom-most video layer */
+    mix-blend-mode: lighten; /* Blend the first video */
+  }
+  
+  .video-layer2 {
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Upper video layer */
+    mix-blend-mode:difference; /* Blend the second video */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 10; /* Content stays above videos */
+    color: var(--text);
+    }
+  

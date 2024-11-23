@@ -1,0 +1,39 @@
+/* Ensure the button is visible */
+.theme-toggle-btn {
+  background-color: #f0f0f0; /* Light background */
+  border: 1px solid #ccc; /* Subtle border */
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: fixed; /* Keeps it always visible */
+  bottom: 20px; /* Place at the bottom */
+  right: 20px; /* Place at the bottom right */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Hover effect for better visibility */
+.theme-toggle-btn:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+}
+
+/* Default icon styles */
+.theme-icon {
+  font-size: 24px;
+  color: #333; /* Default icon color */
+}
+
+/* Dark mode styles */
+body.dark .theme-icon {
+  color: #f39c12; /* Sun color for dark mode */
+}
+
+body:not(.dark) .theme-icon {
+  color: #3498db; /* Moon color for light mode */
+}

@@ -1,0 +1,73 @@
+/* projectcard.css */
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    color: var(--highlight);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+  
+  .project-link {
+    font-size: 1rem;
+    color: var(--text);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .project-link:hover {
+    text-decoration:dotted;
+  }
+  
+  /* Container for the project list */
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default 3 columns for large screens */
+    gap: 20px; /* Space between the cards */
+    padding: 20px;
+  }
+  
+  /* Media Queries */
+  
+  /* Tablet (for screens smaller than 1024px) */
+  @media (max-width: 1024px) {
+    .project-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablet */
+    }
+  }
+  
+  /* Mobile (for screens smaller than 768px) */
+  @media (max-width: 767px) {
+    .project-list {
+      grid-template-columns: 1fr; /* 1 card per row on mobile */
+    }
+  }
+  
